@@ -1,13 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rafael & Thainá ❤️</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <meta
+      name="description"
+      content="Rafael & Thaína - Nossa história de amor"
+    />
+    <meta name="theme-color" content="#ec4899" />
+    <title>Rafael & Thaína ❤️ | Nossa História de Amor</title>
+    <style>
+      /* Loading screen */
+      #loading {
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(135deg, #ec4899, #a855f7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      #loading.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .heart-loader {
+        font-size: 4rem;
+        animation: heartbeat 1s ease-in-out infinite;
+      }
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="loading">
+      <div class="heart-loader">💕</div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("loading").classList.add("hide");
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
