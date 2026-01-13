@@ -30,35 +30,40 @@ function App() {
       title: 'Primeiro Selinho',
       date: '8 de Dezembro, 2024',
       description: 'O momento que mudou tudo',
-      color: 'from-pink-500 to-rose-500'
+      color: 'from-rose-400 to-coral-400',
+      bgColor: 'bg-rose-50/80'
     },
     {
       icon: '💑',
       title: 'Oficialmente Namorando',
       date: '7 de Março, 2025',
       description: 'O pedido mais especial',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-coral-400 to-peach-400',
+      bgColor: 'bg-orange-50/80'
     },
     {
       icon: '🎭',
       title: 'Risadas Infinitas',
       date: 'Todo dia',
       description: 'Porque rir juntos é o melhor',
-      color: 'from-yellow-500 to-orange-500'
+      color: 'from-amber-400 to-yellow-400',
+      bgColor: 'bg-amber-50/80'
     },
     {
       icon: '🌟',
       title: 'Ela Ilumina Meus Dias',
       date: 'Sempre',
       description: 'Espontânea, alegre e perfeita',
-      color: 'from-blue-500 to-purple-500'
+      color: 'from-lavender-400 to-purple-400',
+      bgColor: 'bg-purple-50/80'
     },
     {
       icon: '💕',
       title: 'Amor Crescente',
       date: 'A cada segundo',
       description: 'Me apaixonando mais e mais',
-      color: 'from-red-500 to-pink-500'
+      color: 'from-pink-400 to-rose-400',
+      bgColor: 'bg-pink-50/80'
     }
   ]
 
@@ -111,22 +116,26 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-black relative overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-peach-50 via-lavender-50 to-coral-50 relative overflow-x-hidden">
       {/* Audio Player */}
       <audio ref={audioRef} loop>
         <source src="/songs/lisboa.mp3" type="audio/mpeg" />
       </audio>
 
+
       {/* Animated Background */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 via-purple-500/20 to-pink-500/20 animate-gradient"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,182,193,0.1),transparent_50%)]"></div>
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-coral-300/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-lavender-300/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-peach-300/20 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}}></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,230,220,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(230,220,255,0.3),transparent_50%)]"></div>
       </div>
 
       {/* Music Control Button - Mobile Friendly */}
       <button
         onClick={toggleMusic}
-        className="fixed top-4 right-4 md:top-6 md:right-6 z-50 bg-gradient-to-br from-pink-500 to-rose-500 text-white rounded-full p-3 md:p-4 shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 backdrop-blur-sm border-2 border-white/20"
+        className="fixed top-4 right-4 md:top-6 md:right-6 z-50 bg-gradient-to-br from-coral-400 to-rose-400 text-white rounded-full p-3 md:p-4 shadow-xl hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 backdrop-blur-sm border-2 border-white/50"
         aria-label={isPlaying ? 'Pausar música' : 'Tocar música'}
       >
         {isPlaying ? (
@@ -157,7 +166,7 @@ function App() {
                 className="w-full h-full object-cover"
                 onError={() => handleImageError(index)}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-coral-900/70 via-peach-900/30 to-transparent"></div>
             </div>
           ))}
         </div>
@@ -165,149 +174,184 @@ function App() {
         {/* Navigation Arrows - Responsive */}
         <button
           onClick={prevPhoto}
-          className="absolute left-2 md:left-8 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full p-2 md:p-4 shadow-xl hover:scale-110 active:scale-95 transition-all border border-white/30"
+          className="absolute left-2 md:left-8 z-10 bg-white/80 hover:bg-white backdrop-blur-md rounded-full p-2 md:p-4 shadow-lg hover:shadow-xl hover:scale-110 active:scale-95 transition-all border-2 border-coral-200"
           aria-label="Foto anterior"
         >
-          <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          <svg className="w-6 h-6 md:w-8 md:h-8 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         <button
           onClick={nextPhoto}
-          className="absolute right-2 md:right-8 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full p-2 md:p-4 shadow-xl hover:scale-110 active:scale-95 transition-all border border-white/30"
+          className="absolute right-2 md:right-8 z-10 bg-white/80 hover:bg-white backdrop-blur-md rounded-full p-2 md:p-4 shadow-lg hover:shadow-xl hover:scale-110 active:scale-95 transition-all border-2 border-coral-200"
           aria-label="Próxima foto"
         >
-          <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          <svg className="w-6 h-6 md:w-8 md:h-8 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
         {/* Overlay Content - Responsive */}
-        <div className="relative z-10 text-center px-4 mx-4 max-w-4xl">
-          {/* Hearts Animation */}
-          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 text-4xl md:text-6xl animate-bounce">
-            💕
+        <div className="relative z-10 text-center px-4 mx-4 max-w-5xl">
+          {/* Floating Hearts */}
+          <div className="absolute -top-16 left-0 right-0 flex justify-center gap-8">
+            <span className="text-3xl md:text-5xl animate-float opacity-80">💕</span>
+            <span className="text-4xl md:text-6xl animate-float opacity-90" style={{animationDelay: '1s'}}>💖</span>
+            <span className="text-3xl md:text-5xl animate-float opacity-80" style={{animationDelay: '2s'}}>💕</span>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-xl rounded-3xl md:rounded-[2.5rem] p-6 md:p-12 shadow-2xl border border-white/20">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-pink-400 via-rose-400 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl animate-pulse">
-              Rafael & Thaína
-            </h1>
+          <div className="bg-white/95 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 shadow-2xl border-4 border-coral-200/50 relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-coral-200/40 to-transparent rounded-br-full"></div>
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-lavender-200/40 to-transparent rounded-tl-full"></div>
 
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-4 md:mb-6">
-              <div className="flex items-center gap-4 md:gap-6">
-                <div className="text-center">
-                  <p className="text-4xl md:text-6xl font-bold text-pink-400 drop-shadow-lg">{months}</p>
-                  <p className="text-white/80 text-sm md:text-lg font-medium">meses</p>
-                </div>
-                <span className="text-3xl md:text-5xl animate-pulse">❤️</span>
-                <div className="text-center">
-                  <p className="text-4xl md:text-6xl font-bold text-purple-400 drop-shadow-lg">{days}</p>
-                  <p className="text-white/80 text-sm md:text-lg font-medium">dias</p>
+            <div className="relative">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 md:mb-4 bg-gradient-to-r from-coral-500 via-rose-500 to-lavender-500 bg-clip-text text-transparent">
+                Rafael & Thaína
+              </h1>
+
+              <div className="flex items-center justify-center gap-2 mb-6 md:mb-8">
+                <div className="h-1 w-12 md:w-20 bg-gradient-to-r from-transparent via-coral-300 to-coral-400 rounded-full"></div>
+                <span className="text-2xl md:text-3xl">💝</span>
+                <div className="h-1 w-12 md:w-20 bg-gradient-to-l from-transparent via-lavender-300 to-lavender-400 rounded-full"></div>
+              </div>
+
+              <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 mb-6 md:mb-8">
+                <div className="flex items-center gap-6 md:gap-8">
+                  <div className="text-center bg-gradient-to-br from-coral-50 to-peach-50 rounded-2xl p-4 md:p-6 shadow-md border-2 border-coral-200">
+                    <p className="text-4xl md:text-6xl font-bold text-coral-500">{months}</p>
+                    <p className="text-coral-600 text-sm md:text-base font-semibold mt-1">meses</p>
+                  </div>
+                  <span className="text-4xl md:text-6xl">❤️</span>
+                  <div className="text-center bg-gradient-to-br from-lavender-50 to-purple-50 rounded-2xl p-4 md:p-6 shadow-md border-2 border-lavender-200">
+                    <p className="text-4xl md:text-6xl font-bold text-lavender-500">{days}</p>
+                    <p className="text-lavender-600 text-sm md:text-base font-semibold mt-1">dias</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <p className="text-white text-lg md:text-2xl font-medium drop-shadow-lg">
-              {totalDays} dias de muito amor!
-            </p>
+              <p className="text-gray-700 text-xl md:text-3xl font-semibold mb-6">
+                {totalDays} dias de muito amor!
+              </p>
 
-            <div className="mt-6 md:mt-8 flex flex-wrap justify-center gap-2">
-              <span className="px-3 md:px-4 py-1 md:py-2 bg-pink-500/30 backdrop-blur-sm rounded-full text-white text-xs md:text-sm border border-pink-400/30">
-                Amor Verdadeiro
-              </span>
-              <span className="px-3 md:px-4 py-1 md:py-2 bg-purple-500/30 backdrop-blur-sm rounded-full text-white text-xs md:text-sm border border-purple-400/30">
-                Para Sempre
-              </span>
-              <span className="px-3 md:px-4 py-1 md:py-2 bg-rose-500/30 backdrop-blur-sm rounded-full text-white text-xs md:text-sm border border-rose-400/30">
-                Inseparáveis
-              </span>
+              <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+                <span className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-coral-100 to-peach-100 rounded-full text-coral-700 text-sm md:text-base font-semibold border-2 border-coral-300 shadow-sm">
+                  ✨ Amor Verdadeiro
+                </span>
+                <span className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-lavender-100 to-purple-100 rounded-full text-lavender-700 text-sm md:text-base font-semibold border-2 border-lavender-300 shadow-sm">
+                  🌟 Para Sempre
+                </span>
+                <span className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-rose-100 to-pink-100 rounded-full text-rose-700 text-sm md:text-base font-semibold border-2 border-rose-300 shadow-sm">
+                  💕 Inseparáveis
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Scroll Indicator - Hidden on Mobile */}
         <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg className="w-8 h-8 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+          <div className="bg-white/80 rounded-full p-3 shadow-lg border-2 border-coral-200">
+            <svg className="w-6 h-6 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
         </div>
       </div>
 
       {/* Photo Indicators - Responsive */}
-      <div className="fixed bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-1.5 md:gap-2 max-w-[90vw] overflow-x-auto px-4 pb-2 scrollbar-hide">
-        {photos.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentPhotoIndex(index)}
-            className={`h-2 md:h-3 rounded-full transition-all flex-shrink-0 ${
-              index === currentPhotoIndex
-                ? 'w-6 md:w-8 bg-pink-500'
-                : 'w-2 md:w-3 bg-white/50 hover:bg-white/80'
-            }`}
-            aria-label={`Ver foto ${index + 1}`}
-          />
-        ))}
+      <div className="fixed bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 bg-white/90 backdrop-blur-md rounded-full px-3 md:px-4 py-2 md:py-3 shadow-xl border-2 border-coral-200">
+        <div className="flex gap-1.5 md:gap-2 max-w-[80vw] overflow-x-auto scrollbar-hide">
+          {photos.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPhotoIndex(index)}
+              className={`h-2 md:h-2.5 rounded-full transition-all flex-shrink-0 ${
+                index === currentPhotoIndex
+                  ? 'w-8 md:w-10 bg-gradient-to-r from-coral-400 to-rose-400'
+                  : 'w-2 md:w-2.5 bg-gray-300 hover:bg-coral-300'
+              }`}
+              aria-label={`Ver foto ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Milestones Section - Responsive */}
-      <div className="relative z-10 container mx-auto px-4 py-12 md:py-20">
-        <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4 drop-shadow-lg">
-            Nossos Momentos Marcantes
-          </h2>
-          <div className="flex justify-center gap-2 text-3xl md:text-4xl">
-            <span className="animate-pulse">✨</span>
-            <span className="animate-pulse delay-100">💖</span>
-            <span className="animate-pulse delay-200">✨</span>
+      <div className="relative z-10 container mx-auto px-4 py-16 md:py-24">
+        <div className="text-center mb-12 md:mb-20">
+          <div className="inline-block mb-4">
+            <div className="flex items-center gap-3 bg-white/90 backdrop-blur-md rounded-full px-6 py-3 shadow-lg border-2 border-coral-200">
+              <span className="text-2xl animate-pulse">✨</span>
+              <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-coral-500 to-lavender-500 bg-clip-text text-transparent">
+                Nossos Momentos Marcantes
+              </h2>
+              <span className="text-2xl animate-pulse">✨</span>
+            </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {milestones.map((milestone, index) => (
             <div
               key={index}
-              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl md:rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-white/20"
+              className={`group relative ${milestone.bgColor} backdrop-blur-sm rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 border-2 border-white/50`}
             >
-              <div className={`h-1.5 md:h-2 bg-gradient-to-r ${milestone.color}`}></div>
-              <div className="p-6 md:p-8">
-                <div className="text-5xl md:text-6xl mb-3 md:mb-4 group-hover:scale-110 transition-transform">
+              <div className={`h-2 bg-gradient-to-r ${milestone.color}`}></div>
+              <div className="p-6 md:p-8 relative">
+                <div className="absolute top-4 right-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">
                   {milestone.icon}
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                <div className="text-5xl md:text-6xl mb-4 group-hover:scale-110 transition-transform relative z-10">
+                  {milestone.icon}
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-2 relative z-10">
                   {milestone.title}
                 </h3>
-                <p className="text-pink-400 font-semibold mb-2 md:mb-3 text-sm md:text-base">
-                  {milestone.date}
+                <p className="text-coral-600 font-bold mb-3 text-sm md:text-base relative z-10">
+                  📅 {milestone.date}
                 </p>
-                <p className="text-white/80 text-base md:text-lg">
+                <p className="text-gray-700 text-base md:text-lg font-medium relative z-10">
                   {milestone.description}
                 </p>
               </div>
-              {/* Decorative Corner */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-white/5 to-transparent rounded-bl-full"></div>
+              <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-white/30 to-transparent rounded-tl-[3rem]"></div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Footer - Responsive */}
-      <div className="relative z-10 bg-gradient-to-r from-pink-600 via-rose-600 to-purple-600 py-6 md:py-8 mt-12 md:mt-20">
-        <div className="text-center text-white px-4">
-          <div className="flex justify-center gap-2 md:gap-3 text-2xl md:text-3xl mb-3 md:mb-4">
-            <span className="animate-bounce">💕</span>
-            <span className="animate-bounce delay-100">❤️</span>
-            <span className="animate-bounce delay-200">💕</span>
+      <div className="relative z-10 bg-white/80 backdrop-blur-lg border-t-4 border-coral-200 py-8 md:py-12 mt-16 md:mt-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex justify-center gap-3 md:gap-4 text-3xl md:text-4xl mb-6">
+              <span className="animate-bounce">💕</span>
+              <span className="animate-bounce delay-100">❤️</span>
+              <span className="animate-bounce delay-200">💖</span>
+              <span className="animate-bounce" style={{animationDelay: '0.3s'}}>💕</span>
+            </div>
+
+            <div className="text-center mb-6">
+              <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-coral-500 to-lavender-500 bg-clip-text text-transparent mb-3">
+                Feito com muito amor
+              </p>
+              <div className="inline-block bg-gradient-to-r from-coral-50 to-lavender-50 rounded-2xl px-6 py-4 border-2 border-coral-200 shadow-md">
+                <p className="text-base md:text-xl font-semibold text-gray-800">
+                  Rafael Xavier Oliveira & Thaína Quetlen Dias Pimenta
+                </p>
+              </div>
+            </div>
+
+            <div className="flex justify-center gap-4 text-sm md:text-base text-gray-600">
+              <span className="bg-coral-100 px-4 py-2 rounded-full font-medium">💋 8/12/2024</span>
+              <span className="bg-lavender-100 px-4 py-2 rounded-full font-medium">💑 7/3/2025</span>
+            </div>
+
+            <p className="text-center text-sm md:text-base text-gray-500 mt-6 font-medium">
+              2025 - Para sempre e além 💕✨
+            </p>
           </div>
-          <p className="text-xl md:text-2xl font-bold mb-2">
-            Feito com muito amor
-          </p>
-          <p className="text-sm md:text-lg opacity-90 max-w-md mx-auto">
-            Rafael Xavier Oliveira & Thaína Quetlen Dias Pimenta
-          </p>
-          <p className="text-xs md:text-sm opacity-75 mt-2">
-            2025 - Para sempre 💕
-          </p>
         </div>
       </div>
 
