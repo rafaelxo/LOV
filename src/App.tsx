@@ -13,7 +13,7 @@ function App() {
     { url: '/photos/foto4.JPG', fallback: '/photos/foto4.jpg' },
     { url: '/photos/foto5.JPG', fallback: '/photos/foto5.jpg' },
     { url: '/photos/foto6.JPG', fallback: '/photos/foto6.jpg' },
-    { url: '/photos/foto7.jpg', fallback: '/photos/foto7.JPG' },
+    { url: '/photos/foto7.JPG', fallback: '/photos/foto7.jpg' },
     { url: '/photos/foto8.JPG', fallback: '/photos/foto8.jpg' },
     { url: '/photos/foto9.JPG', fallback: '/photos/foto9.jpg' },
     { url: '/photos/foto10.JPG', fallback: '/photos/foto10.jpg' },
@@ -37,9 +37,25 @@ function App() {
       icon: '💑',
       title: 'Oficialmente Namorando',
       date: '7 de Março, 2025',
-      description: 'O pedido mais especial',
+      description: 'A data que marcou o início do nosso para sempre',
       color: 'from-coral-400 to-peach-400',
       bgColor: 'bg-orange-50/80'
+    },
+    {
+      icon: '🌹',
+      title: 'Primeira Flor',
+      date: '12 de Junho, 2025',
+      description: 'A primeira de muitas flores que ainda vou te dar',
+      color: 'from-red-400 to-rose-400',
+      bgColor: 'bg-red-50/80'
+    },
+    {
+      icon: '🌙',
+      title: 'Conversas até tarde',
+      date: 'Noites sem fim',
+      description: 'Poderia passar horas falando com você',
+      color: 'from-purple-400 to-pink-400',
+      bgColor: 'bg-purple-50/80'
     },
     {
       icon: '🎭',
@@ -50,20 +66,52 @@ function App() {
       bgColor: 'bg-amber-50/80'
     },
     {
+      icon: '🤝',
+      title: 'Primeiro Abraço',
+      date: 'Inesquecível',
+      description: 'Me senti em casa nos seus braços',
+      color: 'from-teal-400 to-cyan-400',
+      bgColor: 'bg-teal-50/80'
+    },
+    {
+      icon: '📸',
+      title: 'Nossa Primeira Foto Juntos',
+      date: 'Para eternizar',
+      description: 'A primeira de uma coleção infinita',
+      color: 'from-blue-400 to-cyan-400',
+      bgColor: 'bg-blue-50/80'
+    },
+    {
+      icon: '💝',
+      title: 'Primeiro Presente',
+      date: 'Guardado com carinho',
+      description: 'Cada detalhe pensado com amor',
+      color: 'from-pink-400 to-fuchsia-400',
+      bgColor: 'bg-pink-50/80'
+    },
+    {
+      icon: '🎵',
+      title: 'Nossa Música',
+      date: 'Lisboa - Ana Vitória',
+      description: 'A trilha sonora do nosso amor',
+      color: 'from-violet-400 to-purple-400',
+      bgColor: 'bg-violet-50/80'
+    },
+    {
       icon: '🌟',
       title: 'Ela Ilumina Meus Dias',
       date: 'Sempre',
       description: 'Espontânea, alegre e perfeita',
-      color: 'from-lavender-400 to-purple-400',
-      bgColor: 'bg-purple-50/80'
+      color: 'from-yellow-400 to-amber-400',
+      bgColor: 'bg-yellow-50/80'
     },
     {
       icon: '💕',
       title: 'Amor Crescente',
       date: 'A cada segundo',
       description: 'Me apaixonando mais e mais',
-      color: 'from-pink-400 to-rose-400',
-      bgColor: 'bg-pink-50/80'
+      color: 'from-rose-400 to-pink-400',
+      bgColor: 'bg-rose-50/80'
     }
   ]
 
@@ -153,7 +201,7 @@ function App() {
       <div className="relative min-h-screen flex items-center justify-center">
         {/* Photo Slideshow Background with Ken Burns Effect */}
         <div className="absolute inset-0 overflow-hidden">
-          {photos.map((photo, index) => (
+          {photos.map((_, index) => (
             <div
               key={index}
               className={`absolute inset-0 transition-all duration-1000 ${
@@ -162,7 +210,7 @@ function App() {
             >
               <img
                 src={getPhotoUrl(index)}
-                alt={`Rafael e Thaína - Momento ${index + 1}`}
+                alt={`Rafael e Thainá - Momento ${index + 1}`}
                 className="w-full h-full object-cover"
                 onError={() => handleImageError(index)}
               />
@@ -207,7 +255,7 @@ function App() {
 
             <div className="relative">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 md:mb-4 bg-gradient-to-r from-coral-500 via-rose-500 to-lavender-500 bg-clip-text text-transparent">
-                Rafael & Thaína
+                Rafael & Thainá
               </h1>
 
               <div className="flex items-center justify-center gap-2 mb-6 md:mb-8">
@@ -239,10 +287,13 @@ function App() {
                   ✨ Amor Verdadeiro
                 </span>
                 <span className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-lavender-100 to-purple-100 rounded-full text-lavender-700 text-sm md:text-base font-semibold border-2 border-lavender-300 shadow-sm">
-                  🌟 Para Sempre
+                  💖 Para Sempre
                 </span>
                 <span className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-rose-100 to-pink-100 rounded-full text-rose-700 text-sm md:text-base font-semibold border-2 border-rose-300 shadow-sm">
-                  💕 Inseparáveis
+                  🌟 Inseparáveis
+                </span>
+                <span className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-yellow-100 to-amber-100 rounded-full text-amber-700 text-sm md:text-base font-semibold border-2 border-amber-300 shadow-sm">
+                  🦋 Almas Gêmeas
                 </span>
               </div>
             </div>
@@ -280,15 +331,16 @@ function App() {
       {/* Milestones Section - Responsive */}
       <div className="relative z-10 container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-12 md:mb-20">
-          <div className="inline-block mb-4">
-            <div className="flex items-center gap-3 bg-white/90 backdrop-blur-md rounded-full px-6 py-3 shadow-lg border-2 border-coral-200">
-              <span className="text-2xl animate-pulse">✨</span>
-              <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-coral-500 to-lavender-500 bg-clip-text text-transparent">
-                Nossos Momentos Marcantes
-              </h2>
-              <span className="text-2xl animate-pulse">✨</span>
-            </div>
+          <div className="flex justify-center items-center gap-3 mb-4">
+            <span className="text-2xl animate-pulse">💖</span>
+            <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-coral-500 to-lavender-500 bg-clip-text text-transparent">
+              Nossos Momentos Marcantes
+            </h2>
+            <span className="text-2xl animate-pulse">💖</span>
           </div>
+          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
+            Cada momento ao seu lado é especial e único 💕
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
@@ -327,18 +379,20 @@ function App() {
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center gap-3 md:gap-4 text-3xl md:text-4xl mb-6">
               <span className="animate-bounce">💕</span>
-              <span className="animate-bounce delay-100">❤️</span>
-              <span className="animate-bounce delay-200">💖</span>
-              <span className="animate-bounce" style={{animationDelay: '0.3s'}}>💕</span>
+              <span className="animate-bounce delay-100">💖</span>
+              <span className="animate-bounce delay-200">💕</span>
             </div>
 
             <div className="text-center mb-6">
               <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-coral-500 to-lavender-500 bg-clip-text text-transparent mb-3">
-                Feito com muito amor
+                Feito com muito amor ❤️
+              </p>
+              <p className="text-gray-600 mb-4 text-sm md:text-base italic">
+                "Você é a razão dos meus sorrisos e a dona do meu coração"
               </p>
               <div className="inline-block bg-gradient-to-r from-coral-50 to-lavender-50 rounded-2xl px-6 py-4 border-2 border-coral-200 shadow-md">
                 <p className="text-base md:text-xl font-semibold text-gray-800">
-                  Rafael Xavier Oliveira & Thaína Quetlen Dias Pimenta
+                  Rafael Xavier Oliveira & Thainá Quetlen Dias Pimenta
                 </p>
               </div>
             </div>
