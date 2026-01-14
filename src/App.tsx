@@ -474,7 +474,7 @@ function App() {
               </p>
               <div className="inline-block bg-gradient-to-r from-coral-50 to-lavender-50 rounded-2xl px-6 py-4 border-2 border-coral-200 shadow-md">
                 <p className="text-base md:text-xl font-semibold text-gray-800">
-                  Rafael Xavier Oliveira <br /> & <br />Thainá Quetlen Dias Pimenta
+                  Rafael Xavier Oliveira <br />Thainá Quetlen Dias Pimenta
                 </p>
               </div>
             </div>
