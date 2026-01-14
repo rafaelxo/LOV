@@ -297,80 +297,37 @@ function App() {
           </svg>
         </button>
 
-        {/* Overlay Content - Responsive */}
-        <div className="relative z-10 text-center px-4 mx-4 max-w-5xl">
-          {/* Floating Hearts */}
-          <div className="absolute -top-16 left-0 right-0 flex justify-center gap-8">
-            <span className="text-3xl md:text-5xl animate-float opacity-80">
-              💕
-            </span>
-            <span
-              className="text-4xl md:text-6xl animate-float opacity-90"
-              style={{ animationDelay: "1s" }}
-            >
-              💖
-            </span>
-            <span
-              className="text-3xl md:text-5xl animate-float opacity-80"
-              style={{ animationDelay: "2s" }}
-            >
-              💕
-            </span>
-          </div>
-
-          <div className="bg-white/95 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 shadow-2xl border-4 border-coral-200/50 relative overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-coral-200/40 to-transparent rounded-br-full"></div>
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-lavender-200/40 to-transparent rounded-tl-full"></div>
-
-            <div className="relative">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 md:mb-4 bg-gradient-to-r from-coral-500 via-rose-500 to-lavender-500 bg-clip-text text-transparent">
+        {/* Info Bar - Compact and at bottom */}
+        <div className="absolute bottom-16 md:bottom-24 left-0 right-0 z-10 flex justify-center px-4">
+          <div className="bg-white/90 backdrop-blur-xl rounded-3xl px-6 md:px-10 py-4 md:py-6 shadow-2xl border-2 border-white/50 max-w-4xl w-full">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-coral-500 via-rose-500 to-lavender-500 bg-clip-text text-transparent">
                 Rafael & Thainá
               </h1>
 
-              <div className="flex items-center justify-center gap-2 mb-6 md:mb-8">
-                <div className="h-1 w-12 md:w-20 bg-gradient-to-r from-transparent via-coral-300 to-coral-400 rounded-full"></div>
-                <span className="text-2xl md:text-3xl">💝</span>
-                <div className="h-1 w-12 md:w-20 bg-gradient-to-l from-transparent via-lavender-300 to-lavender-400 rounded-full"></div>
-              </div>
-
-              <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 mb-6 md:mb-8">
-                <div className="flex items-center gap-6 md:gap-8">
-                  <div className="text-center bg-gradient-to-br from-coral-50 to-peach-50 rounded-2xl p-4 md:p-6 shadow-md border-2 border-coral-200">
-                    <p className="text-4xl md:text-6xl font-bold text-coral-500">
-                      {months}
-                    </p>
-                    <p className="text-coral-600 text-sm md:text-base font-semibold mt-1">
-                      meses
-                    </p>
-                  </div>
-                  <span className="text-4xl md:text-6xl">❤️</span>
-                  <div className="text-center bg-gradient-to-br from-lavender-50 to-purple-50 rounded-2xl p-4 md:p-6 shadow-md border-2 border-lavender-200">
-                    <p className="text-4xl md:text-6xl font-bold text-lavender-500">
-                      {days}
-                    </p>
-                    <p className="text-lavender-600 text-sm md:text-base font-semibold mt-1">
-                      dias
-                    </p>
-                  </div>
+              <div className="flex items-center gap-3 md:gap-6">
+                <div className="text-center">
+                  <p className="text-2xl md:text-4xl font-bold text-coral-500">
+                    {months}
+                  </p>
+                  <p className="text-xs md:text-sm text-coral-600 font-semibold">
+                    meses
+                  </p>
+                </div>
+                <span className="text-2xl md:text-3xl">💕</span>
+                <div className="text-center">
+                  <p className="text-2xl md:text-4xl font-bold text-lavender-500">
+                    {days}
+                  </p>
+                  <p className="text-xs md:text-sm text-lavender-600 font-semibold">
+                    dias
+                  </p>
                 </div>
               </div>
 
-              <p className="text-gray-700 text-xl md:text-3xl font-semibold mb-6">
-                {totalDays} dias de muito amor!
+              <p className="text-sm md:text-lg text-gray-700 font-semibold">
+                {totalDays} dias juntos
               </p>
-
-              <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-                <span className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-coral-100 to-peach-100 rounded-full text-coral-700 text-sm md:text-base font-semibold border-2 border-coral-300 shadow-sm">
-                  ✨ Amor Verdadeiro
-                </span>
-                <span className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-lavender-100 to-purple-100 rounded-full text-lavender-700 text-sm md:text-base font-semibold border-2 border-lavender-300 shadow-sm">
-                  💖 Para Sempre
-                </span>
-                <span className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-rose-100 to-pink-100 rounded-full text-rose-700 text-sm md:text-base font-semibold border-2 border-rose-300 shadow-sm">
-                  🌟 Inseparáveis
-                </span>
-              </div>
             </div>
           </div>
         </div>
@@ -417,14 +374,14 @@ function App() {
       <div className="relative z-10 container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-12 md:mb-20">
           <div className="flex justify-center items-center gap-3 mb-4">
-            <span className="text-2xl animate-pulse">💖</span>
+            <span className="text-2xl">💖</span>
             <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-coral-500 to-lavender-500 bg-clip-text text-transparent">
               Nossos Momentos Marcantes
             </h2>
-            <span className="text-2xl animate-pulse">💖</span>
+            <span className="text-2xl">💖</span>
           </div>
           <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
-            Cada momento ao seu lado é especial e único 💕
+            Cada momento ao seu lado é especial e único
           </p>
         </div>
 
@@ -462,19 +419,21 @@ function App() {
       <div className="relative z-10 bg-white/80 backdrop-blur-lg border-t-4 border-coral-200 py-8 md:py-12 mt-16 md:mt-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="flex justify-center gap-3 md:gap-4 text-3xl md:text-4xl mb-6">
-              <span className="animate-bounce">💕</span>
-              <span className="animate-bounce delay-100">💖</span>
-              <span className="animate-bounce delay-200">💕</span>
-            </div>
-
             <div className="text-center mb-6">
-              <p className="text-gray-600 mb-4 text-sm md:text-base italic">
-                "Você é a razão dos meus sorrisos e a dona do meu coração"
-              </p>
+              <blockquote className="mb-4">
+                <p className="text-gray-600 text-sm md:text-base italic leading-relaxed">
+                  "O amor é paciente, o amor é bondoso. Não inveja, não se
+                  vangloria. Tudo sofre, tudo crê, tudo espera, tudo suporta."
+                </p>
+                <footer className="text-xs md:text-sm text-gray-500 mt-2 flex items-center justify-center gap-2">
+                  <span>✝️</span>
+                  <span>1 Coríntios 13:4-7</span>
+                </footer>
+              </blockquote>
               <div className="inline-block bg-gradient-to-r from-coral-50 to-lavender-50 rounded-2xl px-6 py-4 border-2 border-coral-200 shadow-md">
                 <p className="text-base md:text-xl font-semibold text-gray-800">
-                  Rafael Xavier Oliveira <br />Thainá Quetlen Dias Pimenta
+                  Rafael Xavier Oliveira <br />
+                  Thainá Quetlen Dias Pimenta
                 </p>
               </div>
             </div>
