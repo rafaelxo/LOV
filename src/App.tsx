@@ -89,6 +89,14 @@ function App() {
       bgColor: "bg-orange-50/80",
     },
     {
+      icon: "💝",
+      title: "Primeiro Presente",
+      date: "Guardado com carinho",
+      description: "Cada detalhe pensado com amor",
+      color: "from-pink-400 to-fuchsia-400",
+      bgColor: "bg-pink-50/80",
+    },
+    {
       icon: "🌹",
       title: "Primeira Flor",
       date: "12 de Junho, 2025",
@@ -113,42 +121,10 @@ function App() {
       bgColor: "bg-amber-50/80",
     },
     {
-      icon: "🤝",
-      title: "Primeiro Abraço",
-      date: "Inesquecível",
-      description: "Me senti em casa nos seus braços",
-      color: "from-teal-400 to-cyan-400",
-      bgColor: "bg-teal-50/80",
-    },
-    {
-      icon: "📸",
-      title: "Nossa Primeira Foto Juntos",
-      date: "Para eternizar",
-      description: "A primeira de uma coleção infinita",
-      color: "from-blue-400 to-cyan-400",
-      bgColor: "bg-blue-50/80",
-    },
-    {
-      icon: "💝",
-      title: "Primeiro Presente",
-      date: "Guardado com carinho",
-      description: "Cada detalhe pensado com amor",
-      color: "from-pink-400 to-fuchsia-400",
-      bgColor: "bg-pink-50/80",
-    },
-    {
-      icon: "🎵",
-      title: "Nossa Música",
-      date: "Lisboa - Ana Vitória",
-      description: "A trilha sonora do nosso amor",
-      color: "from-violet-400 to-purple-400",
-      bgColor: "bg-violet-50/80",
-    },
-    {
       icon: "🌟",
-      title: "Ela Ilumina Meus Dias",
+      title: "Iluminando Meus Dias",
       date: "Sempre",
-      description: "Espontânea, alegre e perfeita",
+      description: "Espontânea, alegre e sorridente",
       color: "from-yellow-400 to-amber-400",
       bgColor: "bg-yellow-50/80",
     },
@@ -394,9 +370,6 @@ function App() {
                 <span className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-rose-100 to-pink-100 rounded-full text-rose-700 text-sm md:text-base font-semibold border-2 border-rose-300 shadow-sm">
                   🌟 Inseparáveis
                 </span>
-                <span className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-yellow-100 to-amber-100 rounded-full text-amber-700 text-sm md:text-base font-semibold border-2 border-amber-300 shadow-sm">
-                  🦋 Almas Gêmeas
-                </span>
               </div>
             </div>
           </div>
@@ -496,30 +469,18 @@ function App() {
             </div>
 
             <div className="text-center mb-6">
-              <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-coral-500 to-lavender-500 bg-clip-text text-transparent mb-3">
-                Feito com muito amor ❤️
-              </p>
               <p className="text-gray-600 mb-4 text-sm md:text-base italic">
                 "Você é a razão dos meus sorrisos e a dona do meu coração"
               </p>
               <div className="inline-block bg-gradient-to-r from-coral-50 to-lavender-50 rounded-2xl px-6 py-4 border-2 border-coral-200 shadow-md">
                 <p className="text-base md:text-xl font-semibold text-gray-800">
-                  Rafael Xavier Oliveira & Thainá Quetlen Dias Pimenta
+                  Rafael Xavier Oliveira <br /> & <br />Thainá Quetlen Dias Pimenta
                 </p>
               </div>
             </div>
 
-            <div className="flex justify-center gap-4 text-sm md:text-base text-gray-600">
-              <span className="bg-coral-100 px-4 py-2 rounded-full font-medium">
-                💋 8/12/2024
-              </span>
-              <span className="bg-lavender-100 px-4 py-2 rounded-full font-medium">
-                💑 7/3/2025
-              </span>
-            </div>
-
             <p className="text-center text-sm md:text-base text-gray-500 mt-6 font-medium">
-              2025 - Para sempre e além 💕✨
+              2025 - Para todo o sempre 💕✨
             </p>
           </div>
         </div>
