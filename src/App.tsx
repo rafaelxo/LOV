@@ -74,7 +74,7 @@ function App() {
   const milestones = [
     {
       icon: "💋",
-      title: "Primeiro Selinho",
+      title: "Primeiro beijinho",
       date: "8 de Dezembro, 2024",
       description: "O momento que mudou tudo",
       color: "from-rose-400 to-coral-400",
@@ -82,7 +82,7 @@ function App() {
     },
     {
       icon: "💑",
-      title: "Oficialmente Namorando",
+      title: "O começo do namoro",
       date: "7 de Março, 2025",
       description: "A data que marcou o início do nosso para sempre",
       color: "from-coral-400 to-peach-400",
@@ -90,7 +90,7 @@ function App() {
     },
     {
       icon: "💝",
-      title: "Primeiro Presente",
+      title: "Troca de Presentes",
       date: "Guardado com carinho",
       description: "Cada detalhe pensado com amor",
       color: "from-pink-400 to-fuchsia-400",
@@ -98,7 +98,7 @@ function App() {
     },
     {
       icon: "🌹",
-      title: "Primeira Flor",
+      title: "Seu buquê de rosas",
       date: "12 de Junho, 2025",
       description: "A primeira de muitas flores que ainda vou te dar",
       color: "from-red-400 to-rose-400",
@@ -114,7 +114,7 @@ function App() {
     },
     {
       icon: "🎭",
-      title: "Risadas Infinitas",
+      title: "Risadas infinitas",
       date: "Todo dia",
       description: "Porque rir juntos é o melhor",
       color: "from-amber-400 to-yellow-400",
@@ -122,7 +122,7 @@ function App() {
     },
     {
       icon: "🌟",
-      title: "Iluminando Meus Dias",
+      title: "Iluminando meus dias",
       date: "Sempre",
       description: "Espontânea, alegre e sorridente",
       color: "from-yellow-400 to-amber-400",
@@ -130,7 +130,7 @@ function App() {
     },
     {
       icon: "💕",
-      title: "Amor Crescente",
+      title: "Amor crescente e genuíno",
       date: "A cada segundo",
       description: "Me apaixonando mais e mais",
       color: "from-rose-400 to-pink-400",
