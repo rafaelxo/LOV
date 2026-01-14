@@ -89,20 +89,20 @@ function App() {
       bgColor: "bg-orange-50/80",
     },
     {
-      icon: "💝",
-      title: "Troca de Presentes",
-      date: "Guardado com carinho",
-      description: "Cada detalhe pensado com amor",
-      color: "from-pink-400 to-fuchsia-400",
-      bgColor: "bg-pink-50/80",
-    },
-    {
       icon: "🌹",
       title: "Seu buquê de rosas",
       date: "12 de Junho, 2025",
       description: "A primeira de muitas flores que ainda vou te dar",
       color: "from-red-400 to-rose-400",
       bgColor: "bg-red-50/80",
+    },
+    {
+      icon: "💝",
+      title: "Troca de Presentes",
+      date: "Feitos e guardados com muito carinho",
+      description: "Cada detalhe pensado com amor",
+      color: "from-pink-400 to-fuchsia-400",
+      bgColor: "bg-pink-50/80",
     },
     {
       icon: "🌙",
@@ -127,6 +127,14 @@ function App() {
       description: "Espontânea, alegre e sorridente",
       color: "from-yellow-400 to-amber-400",
       bgColor: "bg-yellow-50/80",
+    },
+    {
+      icon: "🤗",
+      title: "Nosso carinho especial",
+      date: "Em cada toque",
+      description: "Abraços que curam tudo e aquele cafuné perfeito",
+      color: "from-teal-400 to-cyan-400",
+      bgColor: "bg-teal-50/80",
     },
     {
       icon: "💕",
